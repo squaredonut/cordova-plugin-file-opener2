@@ -108,12 +108,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             return;
         }
 
-        self.controller = [UIDocumentInteractionController  interactionControllerWithURL:fileURL];
+        self.controller = [UIDocumentInteractionController interactionControllerWithURL:fileURL];
         self.controller.delegate = self;
         self.controller.UTI = uti;
 
         CDVPluginResult* pluginResult = nil;
-        BOOL wasOpened = [self.controller presentPreviewAnimated: animated:NO];
+        BOOL wasOpened = [self.controller presentPreviewAnimated:NO];
 
         if(wasOpened) {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: @""];
