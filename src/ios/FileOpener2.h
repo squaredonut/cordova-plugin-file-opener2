@@ -30,5 +30,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 @property(nonatomic, strong) UIDocumentInteractionController *controller;
 
 - (void) open: (CDVInvokedUrlCommand*)command;
+- (void) preview: (CDVInvokedUrlCommand*)command;
 
 @end
