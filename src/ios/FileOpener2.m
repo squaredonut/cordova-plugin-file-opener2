@@ -28,13 +28,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @implementation FileOpener2
 
-(UIViewController ​*)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *​)controller
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller
 {  
 	UIWindow *window = [UIApplication sharedApplication].keyWindow;
 	return window.rootViewController;
 }
 
-- (UIView ​*)documentInteractionControllerViewForPreview:(UIDocumentInteractionController *​)controller
+- (UIView *)documentInteractionControllerViewForPreview:(UIDocumentInteractionController *)controller
 {    
 	return [UIApplication sharedApplication].keyWindow;
 }
