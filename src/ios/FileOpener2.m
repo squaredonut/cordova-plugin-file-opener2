@@ -28,19 +28,20 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @implementation FileOpener2
 
-- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller
-{
-    return self;
+(UIViewController ​*)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *​)controller
+{  
+	UIWindow *window = [UIApplication sharedApplication].keyWindow;
+	return window.rootViewController;
 }
 
-- (UIView *)documentInteractionControllerViewForPreview:(UIDocumentInteractionController *)controller
-{
-    return self.view;
+- (UIView ​*)documentInteractionControllerViewForPreview:(UIDocumentInteractionController *​)controller
+{    
+	return [UIApplication sharedApplication].keyWindow;
 }
 
 - (CGRect)documentInteractionControllerRectForPreview:(UIDocumentInteractionController *)controller
-{
-    return self.view.frame;
+{    
+	return [UIApplication sharedApplication].keyWindow.frame;
 }
 
 - (void) open: (CDVInvokedUrlCommand*)command {
